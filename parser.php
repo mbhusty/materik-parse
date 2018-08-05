@@ -18,37 +18,16 @@ $file_petrovich = file_get_contents($url_petrovich);
 $file_spbstroy = file_get_contents($url_spbstroy);
 $file_maxidom = file_get_contents($url_maxidom);
 $file_leroymerlin = file_get_contents($url_leroymerlin);
-/*
-$pattern = '#<span class="goldPrice.+?</span>#s';
-
-
-preg_match($pattern, $file, $matches);
-
-print_r ($matches);
-*/
-
-//echo htmlspecialchars ($file);
 
 $doc_petrovich = phpQuery::newDocument($file_petrovich);
 $doc_spbstroy = phpQuery::newDocument($file_spbstroy);
 $doc_maxidom = phpQuery::newDocument($file_maxidom);
 $doc_leroymerlin = phpQuery::newDocument($file_leroymerlin);
-//var_dump($doc);
 
 $cls_petrovich = $doc_petrovich -> find('.retailPrice') -> text();
 $cls_spbstroy = $doc_spbstroy -> find('.item_current_price') -> text();
 $cls_maxidom = $doc_maxidom -> find('#once_item_price') -> text();
 $cls_leroymerlin = $doc_leroymerlin -> find('.product__price') -> text();
-
-
-
-/*
-echo "Петрович: ".$cls;
-echo "Снабстрой: ".$cls1;
-echo "Максидом: ".$cls2;
-echo "Леруа: ".$cls3;
-*/
-
 ?>
 <!DOCTYPE html>
 <html>
