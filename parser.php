@@ -43,19 +43,19 @@ $cls_leroymerlin = $doc_leroymerlin -> find('.product__price') -> text();
     </tr>
     <tr>
         <td>Петрович</td>
-        <td><?php echo $cls_petrovich;?></td>
+        <td><?=$cls_petrovich;?></td>
     </tr>
     <tr>
         <td>Снабстрой</td>
-        <td><?php echo $cls_spbstroy;?></td>
+        <td><?=$cls_spbstroy;?></td>
     </tr>
     <tr>
         <td>Максидом</td>
-        <td><?php echo $cls_maxidom;?></td>
+        <td><?=$cls_maxidom;?></td>
     </tr>
     <tr>
         <td>Леруа</td>
-        <td><?php echo $cls_leroymerlin;?></td>
+        <td><?=$cls_leroymerlin;?></td>
     </tr>
 </table>
 
